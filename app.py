@@ -9,7 +9,7 @@ app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": ["http://localhost:5173"]}})
 
 # Load the YOLOv8 model
-model = YOLO(r'C:\Users\Flourence Lapore\Desktop\AI versions\second training data\runs\detect\train\weights\last.pt')
+model = YOLO('weights/last.pt')
 
 # Open the default camera (index 0)
 cap = cv2.VideoCapture(0)
